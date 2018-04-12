@@ -83,9 +83,9 @@ echo "set runtimepath+=~/.vim/bundle/syntastic/plugin/syntastic.vim" >> ~/.vimrc
 
 #neocomplete
 
-git clone https://github.com/vim-syntastic/syntastic.git
-vim -u NONE -c "helptags syntastic/doc" -c q
-echo "set runtimepath+=~/.vim/bundle/syntastic/plugin/syntastic.vim" >> ~/.vimrc
+git clone https://github.com/Shougo/neocomplete.vim.git
+vim -u NONE -c "helptags neocomplete.vim/doc" -c q
+echo "set runtimepath+=~/.vim/bundle/neocomplete.vim/plugin/neocomplete.vim" >> ~/.vimrc
 echo "au FileType php setl ofu=phpcomplete#CompletePHP" >> ~/.vimrc
 echo "au FileType ruby,eruby setl ofu=rubycomplete#Complete" >> ~/.vimrc
 echo "au FileType html,xhtml setl ofu=htmlcomplete#CompleteTags" >> ~/.vimrc
