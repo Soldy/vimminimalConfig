@@ -25,7 +25,7 @@ echo "set noeb vb t_vb=" >> ~/.vimrc
 echo "set t_Co=256" >> ~/.vimrc
 echo "set laststatus=2" >> ~/.vimrc
 echo "filetype plugin on" >> ~/.vimrc
-
+echo "syntax on" >> ~/.vimrc
 
 #############################
 #         plugin install    #
