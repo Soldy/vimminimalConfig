@@ -2,6 +2,8 @@ colorscheme jellybeans
 
 set t_Co=256
 syntax on
+set encoding=utf-8
+set fileencoding=utf-8
 set path+=**
 set wildmenu
 set tabpagemax=15               " only show 15 tabs
