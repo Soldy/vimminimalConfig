@@ -11,7 +11,6 @@ set showmode                    " display the current mode
 set cursorline                  " highlight current line
 set backspace=indent,eol,start  " backspace for dummys
 set linespace=0                 " No extra spaces between rows
-set nu                          " Line numbers on
 set showmatch                   " show matching brackets/parenthesis
 set incsearch                   " find as you type search
 set hlsearch                    " highlight search terms
@@ -42,6 +41,14 @@ set bdir+=~/.vim/tmp/bdir/
 set dir-=.
 set dir+=~/.vim/tmp/dir/
 
+
+set number relativenumber       " hybrid relative line number
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
+augroup END
 if has('cmdline_info')
     set ruler                   " show the ruler
     set showcmd                 " show partial commands in status line and
