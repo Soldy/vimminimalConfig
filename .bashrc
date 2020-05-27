@@ -11,4 +11,4 @@ if [ -f ~/.bash_aliases ]; then
 fi
 set -o vi
 stty -ixon
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:/opt/bin
