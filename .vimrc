@@ -90,11 +90,29 @@ au FileType css setl ofu=csscomplete#CompleteCSS
 
 syntax sync minlines=256
 
+"  exclude node modules
+set wildignore+=**/node_modules/** 
+" ctags with exclude node modules
+command Cts !ctags -R --exclude=node_modules .
+
 " search script 
 
-set grepprg=ag\ --vimgrep\ $*
-set grepformat=%f:%l:%c:%m
-set fillchars+=vert:│
+"set grepprg=ag\ --vimgrep\ $*
+"set grepformat=%f:%l:%c:%m
+
+
+" The Silver Searcher
+if executable('ag')
+"   " Use ag over grep
+    set grepprg=ag\ --vimgrep\ --nogroup\ --color
+    " Use ag in CtrlP for listing files. Lightning fast and respects  .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --vimgrep --nocolor -g ""'
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+endif
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " search script end
 
