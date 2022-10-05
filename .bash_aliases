@@ -10,3 +10,11 @@ w3(){
      w3m -dump -cols 2000 -T 'text/html'
 }
 
+debugOn(){
+    export CFLAGS=" -g3 -Ofast -mfpmath=sse -mhard-float -march=westmere -mtune=westmere -Ofast -mfxsr -mmmx -msse -msse2 -mssse3 -msse4.1 -msse4.2 -maes -mpopcnt"
+    export CFLAG=$CFLAGS
+    export CCFLAG=$CFLAGS
+    export CCFLAGS=$CFLAGS
+    export CXXFLAG=$CFLAGS
+    export CXXFLAGS=$CFLAGS
+}
