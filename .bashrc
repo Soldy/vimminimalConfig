@@ -12,3 +12,5 @@ fi
 set -o vi
 stty -ixon
 export PATH=$PATH:/opt/bin
+
+setxkbmap -option caps:swapescape
