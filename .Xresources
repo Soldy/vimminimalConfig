@@ -1,0 +1,3 @@
+XTerm*decTerminalID: vt340
+xterm*sixelScrolling: 1
+xterm*sixelScrollsRight: 1
